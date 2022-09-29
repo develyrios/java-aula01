@@ -1,12 +1,15 @@
 package aula01;
 
-import.java.
 public class ContaCorrente {
-    Integer numeroConta;
+    //Valor padrão para os primitivos é 0
+    //Valor padrão para os wrappers é null (nulo)
+
+    private Integer numeroConta;
     Integer numeroAgencia;
     String nomeCliente;
-    Date dataNascimento;
-    Double saldo;
+    //Date dataNascimento;
+    //Double pode ser declarado 0.0 ou 0d
+    private Double saldo = 0.0;
 
     void setNumeroConta(Integer numeroConta){
         //O if com null garante que um número seja atribuído SOMENTE
@@ -23,5 +26,17 @@ public class ContaCorrente {
 
     Integer getNumeroConta (){
         return numeroConta;
+    }
+
+    void sacar(Double valor){
+        this.saldo = this.saldo - valor;
+    }
+
+    void depositar(Double valor){
+        this.saldo = this.saldo + valor;
+    }
+
+    Double consultarSaldo(){
+        return saldo;
     }
 }

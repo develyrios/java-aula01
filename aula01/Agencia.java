@@ -3,10 +3,9 @@ package aula01;
 //A Agencia que vai iniciar a ação, portanto, vai ter o método main, ou seja,
 //ela que vai puxar as outras classes
 public class Agencia {
-    //Assinatura de método, segue essa declaração. O nome do parãmtero "args"
-    //pode ser modificado, o resto, não. "String []" é a declaração de um
-    //String array.
-    public static void main (String [] args) {
+    //Assinatura de método, segue essa declaração. O nome do parãmtero pode ser
+    //modificado, o resto, não. "String []" é a declaração de um String array.
+    public static void main (String [] parametro) {
         //Instanciar: criar um objeto na memória através do "new"
         ContaCorrente conta01 = new ContaCorrente();
 
@@ -18,5 +17,15 @@ public class Agencia {
         //Quando se usa um ponto após a variável podemos acessar e
         //interagir com algumas informações dela
         System.out.println(conta01.getNumeroConta());
+
+        //Precisa colocar a casa decimal porque o wrapper Double
+        //pede essa notação
+        conta01.depositar(213.0);
+
+        System.out.println(conta01.consultarSaldo());
+
+        conta01.sacar(37d);
+
+        System.out.println(conta01.consultarSaldo());
     }
 }
