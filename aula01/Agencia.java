@@ -1,3 +1,5 @@
+//Pacote (package) organiza o nosso projeto e as classes do projeto (diz que a classe está em um diretório),
+//o que trás a necessidade de ter imports pra usar classes que estão em outro pacotes.
 package aula01;
 
 //A Agencia que vai iniciar a ação, portanto, vai ter o método main, ou seja,
